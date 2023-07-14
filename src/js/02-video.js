@@ -8,6 +8,7 @@ const saveCurrentTime = () => {
   });
 };
 
+
 const loadCurrentTime = () => {
   const currentTime = localStorage.getItem('videoplayer-current-time');
   if (currentTime) {

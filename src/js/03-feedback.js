@@ -19,8 +19,6 @@ const loadFormData = () => {
     emailInputEl.value = parsedData.email;
     messageInputEl.value = parsedData.message;
   }
-  emailInputEl.value = '';
-  messageInputEl.value = '';
 };
 
 const clearFormData = () => {
@@ -35,6 +33,9 @@ const submitForm = event => {
     email: emailInputEl.value,
     message: messageInputEl.value,
   };
+  if (emailInputEl.value === '' || messageInputEl.value === '') {
+    return alert('Both rows must be filled in');
+  }
   console.log(formData);
   clearFormData();
 };
